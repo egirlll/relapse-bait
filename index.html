@@ -193,8 +193,6 @@
         <div class="buttons-grid">
             <button class="btn btn-primary" onclick="navigate('throne')">Throne</button>
 
-            <button class="btn btn-primary" onclick="copyPayPal()">PayPal</button>
-
             <div class="crypto-dropdown">
                 <button class="btn btn-primary dropdown-btn" onclick="toggleDropdown()">
                     Crypto <span id="dropdown-arrow">▼</span>
@@ -255,15 +253,6 @@
                 return;
             }
             window.location.href = link;
-        }
-
-        function copyPayPal() {
-            const paypalEmail = 'realbrattybrooke@gmail.com';
-            navigator.clipboard.writeText(paypalEmail).then(() => {
-                alert('✓ PayPal email copied: ' + paypalEmail);
-            }).catch(() => {
-                alert('Failed to copy');
-            });
         }
 
         function copyAddress(crypto, element) {
